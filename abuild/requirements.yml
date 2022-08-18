@@ -1,0 +1,4 @@
+---
+collections:
+  - name: https://github.com/rzfeeser/ansible-custom-modules-nasa-api
+    type: git

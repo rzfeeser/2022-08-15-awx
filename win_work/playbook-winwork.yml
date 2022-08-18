@@ -1,0 +1,42 @@
+---
+
+- name: Ensure state, verify, and alert on change
+  hosts: all # you make this work for you
+
+  tasks:
+
+   - name: Software Installs
+     block:
+      # Install/uninstall with win_command
+      - name: Download the 7-Zip package
+        win_get_url:
+          url: https://www.7-zip.org/a/7z1701-x64.msi
+          dest: C:\temp\7z.msi
+      - name: Check if 7-Zip is already installed
+        win_reg_stat:
+          name: HKLM:\SOFTWARE\Microsoft\Windows\CurrentVersion\Uninstall\{23170F69-40C1-2702-1701-000001000000}
+        register: 7zip_installed
+      
+      - name: Ensure 7-Zip is installed via win_command
+        win_command: C:\Windows\System32\msiexec.exe /i C:\temp\7z.msi /qn /norestart
+        when: 7zip_installed.exists == false
+     notify:
+      - Change alert - Software degregation
+
+  handlers:
+      - name: Change alert - Software degretation
+        servicenow.servicenow.snow_record:
+          username: ansible_test  # vars
+          password: my_password   # vars
+          instance: dev99999      # vars
+          state: present
+          data:
+            short_description: "Ansible playbook {{  }} just made a change!"
+            severity: 3
+            priority: 2
+            long_description: """
+            Python Interpeter - {{ ansible_playbook_python }}
+            Ansible Version Used - {{ ansible_version }}
+            Git Project Revision - {{ lookup(env, 'PROJECT_REVISION') }}
+            
+            """

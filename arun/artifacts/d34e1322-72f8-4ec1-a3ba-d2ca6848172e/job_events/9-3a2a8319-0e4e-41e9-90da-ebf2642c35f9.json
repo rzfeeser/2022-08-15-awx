@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "3a2a8319-0e4e-41e9-90da-ebf2642c35f9", "counter": 9, "stdout": "\u001b[0;35mdeprecated. Use host instead. This feature will be removed from \u001b[0m", "start_line": 8, "end_line": 9, "runner_ident": "d34e1322-72f8-4ec1-a3ba-d2ca6848172e", "created": "2022-08-16T20:20:56.075650"}

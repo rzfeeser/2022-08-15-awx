@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "5cd2867a-1c42-42ea-808f-022a1ee1b608", "counter": 9, "stdout": "\u001b[0;31m        - name: Lookup the NASA APOD API for 2019-01-01 in std def\u001b[0m", "start_line": 8, "end_line": 9, "runner_ident": "0a4ef79c-8f73-40ec-a394-e702501c7fa8", "created": "2022-08-17T16:57:15.240349"}

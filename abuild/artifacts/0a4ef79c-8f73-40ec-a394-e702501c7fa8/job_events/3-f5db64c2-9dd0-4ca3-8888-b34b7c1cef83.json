@@ -1,0 +1,1 @@
+{"event": "verbose", "uuid": "f5db64c2-9dd0-4ca3-8888-b34b7c1cef83", "counter": 3, "stdout": "\u001b[0;31mThe error appears to be in '/runner/project/playbook-example-nasa_apod.yml': line 12, column 11, but may\u001b[0m", "start_line": 2, "end_line": 3, "runner_ident": "0a4ef79c-8f73-40ec-a394-e702501c7fa8", "created": "2022-08-17T16:57:15.238933"}

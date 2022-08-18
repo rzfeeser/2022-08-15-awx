@@ -1,0 +1,5 @@
+---
+collections:
+    - google.cloud
+    # - community.google  # there is another google collection, but so far our solutions do
+    # not use any community.google plugins

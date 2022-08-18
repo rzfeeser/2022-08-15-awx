@@ -1,0 +1,20 @@
+[1;35m[WARNING]: No inventory was parsed, only implicit localhost is available[0m
+[1;35m[WARNING]: provided hosts list is empty, only localhost is available. Note that[0m
+[1;35mthe implicit localhost does not match 'all'[0m
+[0;35m[DEPRECATION WARNING]: dellemc.powerstore.dellemc_powerstore_volume has been [0m
+[0;35mdeprecated. Use volume instead. This feature will be removed from [0m
+[0;35mdellemc.powerstore in a release after 2024-03-31. Deprecation warnings can be [0m
+[0;35mdisabled by setting deprecation_warnings=False in ansible.cfg.[0m
+[0;35m[DEPRECATION WARNING]: dellemc.powerstore.dellemc_powerstore_host has been [0m
+[0;35mdeprecated. Use host instead. This feature will be removed from [0m
+[0;35mdellemc.powerstore in a release after 2024-03-31. Deprecation warnings can be [0m
+[0;35mdisabled by setting deprecation_warnings=False in ansible.cfg.[0m
+
+PLAY [VMWare VM Creation and Attach PowerStore Volumes] ************************
+
+TASK [Preparing VM "demo-ansible-ps03" on local Drive to perform Anisble Demo   /   *** Next task will create Volume "ps03-AnsibleDemo" on PowerStore] ***
+[0;31mAn exception occurred during task execution. To see the full traceback, use -vvv. The error was: ModuleNotFoundError: No module named 'pyVim'[0m
+[0;31mfatal: [localhost]: FAILED! => {"changed": false, "msg": "Failed to import the required Python library (PyVmomi) on bchd's Python /usr/bin/python3. Please read the module documentation and install it in the appropriate location. If the required library is installed, but Ansible is using the wrong Python interpreter, please consult the documentation on ansible_python_interpreter"}[0m
+
+PLAY RECAP *********************************************************************
+[0;31mlocalhost[0m                  : ok=0    changed=0    unreachable=0    [0;31mfailed=1   [0m skipped=0    rescued=0    ignored=0   
